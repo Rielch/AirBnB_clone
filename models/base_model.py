@@ -41,8 +41,8 @@ class BaseModel:
         for key in self.__dict__:
             self_dict[key] = self.__dict__[key]
         self_dict["__class__"] = self.__class__.__name__
-        self_dict["created_at"] =\
-        self.created_at.strftime("%Y-%m-%dT%H:%M:%S.%f")
-        self_dict["updated_at"] =\
-        self.updated_at.strftime("%Y-%m-%dT%H:%M:%S.%f")
+        self_dict["created_at"] = self.created_at.strftime(
+            "%Y-%m-%dT%H:%M:%S.%f")
+        self_dict["updated_at"] = self.updated_at.strftime(
+            "%Y-%m-%dT%H:%M:%S.%f")
         return self_dict

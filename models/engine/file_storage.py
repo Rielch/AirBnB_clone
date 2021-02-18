@@ -38,9 +38,9 @@ class FileStorage:
             with open(FileStorage.__file_path, mode="r",
                       encoding="utf-8") as json_file:
                 obj_dict = json.load(json_file)
-                for key in obj_dict:
-                    cls = obj_dict[key].get("__class__")
-                    new_obj = eval(cls+"()")
+                for key, value in obj_dict.items():
+                    cls = value.get("__class__")
+                    new_obj = eval(cls+'(**value)')
                     self.new(new_obj)
-        except:
+        except Exception:
             pass

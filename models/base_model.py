@@ -11,18 +11,23 @@ class BaseModel:
     def __init__(self, *args, **kwargs):
         """Initializates the BaseModel instance"""
         if len(kwargs) is not 0:
+            print("Dictionary initialization")
+            print("Kwargs: {}".format(kwargs))
             for key in kwargs:
-                if key is not "__class__":
+                print("Key:", key)
+                if key != "__class__":
                     if key is "updated_at" or key is "created_at":
                         setattr(self, key, datetime.
                                 strptime(kwargs[key], "%Y-%m-%d %H:%M:%S.%f"))
                     else:
                         setattr(self, key, kwargs[key])
+
         else:
+            print("Normal initialization")
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
-            models.storage.new(self)
+        models.storage.new(self)
 
     def __str__(self):
         """String representation of the BaseModel instance"""

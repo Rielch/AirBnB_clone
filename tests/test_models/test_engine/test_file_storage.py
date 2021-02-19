@@ -42,10 +42,14 @@ class TestFileStorage(unittest.TestCase):
 
     def test_save(self):
         """Test the save method"""
+        if path.exists(storage._FileStorage__file_path):
+            size = path.getsize(storage._FileStoragee__file_path)
+        else:
+            size = 0
         instance = BaseModel()
         instance.save()
-        self.assertTrue(path.exists("file.json"))
-        self.assertTrue(path.getsize("file.json") > 0)
+        self.assertTrue(path.exists(storage._FileStorage__file_path))
+        self.assertTrue(size > path.getsize(storage._FileStorage__file_path))
 
     def test_reload(self):
         """Test the reload method"""

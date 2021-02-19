@@ -13,6 +13,13 @@ class TestUser(unittest.TestCase):
         self.assertTrue(len(user.__doc__) > 1)
         self.assertTrue(len(User.__doc__) > 1)
 
+    def test_attributes(self):
+        """Test the attributes"""
+        instance = User()
+        self.assertIsInstance(instance.first_name, str)
+        self.assertIsInstance(instance.email, str)
+        self.assertIsInstance(instance.password, str)
+        self.assertIsInstance(instance.last_name, str)
 
 if __name__ == "__main__":
     """Executes the test cases"""

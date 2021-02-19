@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Unittest for Place class"""
 from models.place import Place
-from models import place
 import unittest
 
 
@@ -10,7 +9,6 @@ class TestPlace(unittest.TestCase):
 
     def test_documentation(self):
         """Test the documentation of the module and the class"""
-        self.assertTrue(len(place.__doc__) > 1)
         self.assertTrue(len(Place.__doc__) > 1)
 
 

@@ -20,6 +20,11 @@ class TestFileStorage(unittest.TestCase):
         self.assertTrue(len(FileStorage.save.__doc__) > 1)
         self.assertTrue(len(FileStorage.reload.__doc__) > 1)
 
+    def test_attributes(self):
+        """Test the attributes"""
+        self.assertIsInstance(storage._FileStorage__file_path, str)
+        self.assertIsInstance(storage._FileStorage__objects, dict)
+
     def test_all(self):
         """Test the all method"""
         instance = BaseModel()

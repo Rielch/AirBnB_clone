@@ -9,7 +9,6 @@ import datetime
 class TestBaseModel(unittest.TestCase):
     """Class with tests for BaseModel class"""
 
-
     def test_documentation(self):
         """Test for documentation in the module, class and methods"""
         self.assertTrue(len(BaseModel.__doc__) > 1)

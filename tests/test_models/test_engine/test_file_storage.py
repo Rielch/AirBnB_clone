@@ -8,7 +8,6 @@ import unittest
 from os import path
 
 
-
 class TestFileStorage(unittest.TestCase):
     """Class to test the FileStorage class"""
 

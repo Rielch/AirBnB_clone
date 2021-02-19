@@ -2,7 +2,7 @@
 
   Console to control all classes and serializate and deserializates json files
 
-  ![HBNB image](https://photos.google.com/photo/AF1QipP9E72ovAQeUj7BoSTCPxE4O8qUhLLSk8dH7kgB)
+  ![HBNB image](https://github.com/Rielch/Image/blob/main/HBNB.png)
 
 ## Repository contents
 

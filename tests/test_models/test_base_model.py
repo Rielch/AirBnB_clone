@@ -3,7 +3,7 @@
 from models.base_model import BaseModel
 from models import base_model
 import unittest
-from datetime import datetime
+import datetime
 
 
 class TestBaseModel(unittest.TestCase):
@@ -26,27 +26,25 @@ class TestBaseModel(unittest.TestCase):
         self.assertNotEqual(instance1.id, instance2.id)
         self.assertIsInstance(instance1.id, str)
         #Test created_at
-        self.assertEqual(instance1.created_at, instance1.updated_at)
-        self.assertIsInstance(instance1.created_at, datetime)
+        self.assertIsInstance(instance1.created_at, datetime.datetime)
         #Test updated_at
-        self.assertEqual(update1, instance1.created_at)
+        self.assertIsInstance(instance1.updated_at, datetime.datetime)
 
     def test___init__(self):
         """Test the __init__ method"""
-        inst_dict = {'created_at': datetime.datetime(2021, 2, 19, 2,
-                                                     36, 21, 947456),
-                     'updated_at': datetime.datetime(2021, 2, 19, 2,
-                                                     36, 21, 947491),
-                     'id': '04121eba-7ce3-444e-90de-4963d8e76096'}
+        inst_dict = {"updated_at": "2021-02-19T03:57:16.114023",
+                     "__class__": "BaseModel",
+                     "id": "39690735-03ae-41ff-a42d-88e08510a07c",
+                     "created_at": "2021-02-19T03:57:16.113987"}
         instance1 = BaseModel(**inst_dict)
-        self.assertEqual(instance1.id, '04121eba-7ce3-444e-90de-4963d8e76096')
+        self.assertEqual(instance1.id, "39690735-03ae-41ff-a42d-88e08510a07c")
 
     def test_save(self):
         """Test the save method"""
         instance1 = BaseModel()
         update1 = instance1.updated_at
-        isntance1.save()
-        update2 = instance2.updated_at
+        instance1.save()
+        update2 = instance1.updated_at
         self.assertNotEqual(update1, update2)
 
     def test_to_dict(self):

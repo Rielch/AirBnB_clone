@@ -49,9 +49,10 @@ class TestFileStorage(unittest.TestCase):
 
     def test_reload(self):
         """Test the reload method"""
+        objs1 = len(storage.all())
         storage.reload()
-        objs = storage.all()
-        self.assertNotEqual(len(objs), 0)
+        objs2 = len(storage.all())
+        self.assertNotEqual(objs2, objs1)
 
 
 if __name__ == "__main__":

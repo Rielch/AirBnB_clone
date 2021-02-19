@@ -116,7 +116,7 @@ class HBNBCommand(cmd.Cmd):
             if key not in obj_dict:
                 print("** no instance found **")
             else:
-                setattr(obj_dict[key], arg[2], arg[3])
+                setattr(obj_dict[key], arg[2], arg[3].strip('"'))
         storage.save()
 
 

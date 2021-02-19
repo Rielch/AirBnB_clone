@@ -1,3 +1,65 @@
-#HBNB - The AirBNB clone
+# HBNB - The AirBNB clone - The console
 
-![Image of HBNB](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20210219%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210219T122246Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=9208a7e27b83a9eb525bba5f319c9b44dc6dfc4389a456f973ce0c1af4f8cecb)
+  Console to control all classes and serializate and deserializates json files
+
+## Repository contents
+
+   File/Directory | Description
+   -------------- | -----------
+   console.py | Console of the AirBNB clone
+   models | Folder containing all the models to be utilized
+   tests | Unittest for all the classes used in the program
+   AUTHORS | Creators of the program
+
+## Clone the repository
+
+   To be able to utilize the console you will need to download it using git
+   If you don't have git installed in you Linux computer you can install it with the command:
+
+   ```
+   $ sudo apt-get install git
+   ```
+
+   Then you can use the command:
+
+   ```
+   $ git clone https://github.com/Rielch/AirBnB_clone.git
+   ```
+
+   And with that you have you own copy of the program.
+
+## Usage
+
+   To execute the console use the command:
+
+   ```
+   $ ./console.py
+   ```
+
+   In the directory with the program in it.
+
+
+## Commands
+
+  The commands wich you can use are the following:
+
+  **help** - Usage: `(hbnb) help` / `(hbnb) help command_name`
+  	   If used `(hbnb) help` display the list of commands wich you can read the help. If it's used as `(hbnb) help command_name` it displays the help for the specified command
+
+  **quit** - Usage: `(hbnb) quit`
+  	   Exit the console, you can also use ctrl + D
+
+  **create** - Usage: `(hbnb) create class_name`
+  	     Creates an instance of the specified class and prints it's id
+
+  **show** - Usage: `(hbnb) show class_name instance_id`
+  	   Prints the string representation of an instance based in the class name and instance id
+
+  **destroy** - Usage: `(hbnb) destroy class_name instance_id`
+  	      Deletes an instance based in the class name and instance id
+
+  **all** - Usage: `(hbnb) all` / `(hbnb) all class_name`
+  	  Prints the string representation of all instances or instances of a single class if specified
+
+  **update** - Usage `(hbnb) update class_name instance_id attribute "value"`
+  	     Adds or updates an attribute based in the class name and the instance id

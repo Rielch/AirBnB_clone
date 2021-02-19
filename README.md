@@ -1,1 +1,3 @@
-README to complete
+#HBNB - The AirBNB clone
+
+![Image of HBNB](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20210219%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210219T122025Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=0a5e8a3d4e3e70977cad23b2dcf8a03d97cc5fe2da4f242c0a5a74d13952d8b1)

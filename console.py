@@ -117,6 +117,7 @@ class HBNBCommand(cmd.Cmd):
                 print("** no instance found **")
             else:
                 setattr(obj_dict[key], arg[2], arg[3])
+        storage.save()
 
 
 if __name__ == '__main__':

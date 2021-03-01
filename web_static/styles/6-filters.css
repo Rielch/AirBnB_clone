@@ -63,6 +63,10 @@ button:hover {
     list-style-type: none;
 }
 
+.popover ul {
+    list-style-type: none;
+}
+
 .popover h2 {
     font-size: 16px;
 }
